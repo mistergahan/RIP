@@ -5,18 +5,12 @@ import arrow
 
 
 def main():
-    r = Rectangle("синего", 11, 11)
-    c = Circle("зеленого", 11)
-    s = Square("красного", 11)
-
-   # from datetime import datetime
-   # dt = datetime.now()
-    #arrow_dt = arrow.Arrow.formdate(dt)
-   # print(dt)
-    #print(arrow_dt)
+    r = Rectangle("синего", 5, 6)
+    c = Circle("красного", 11)
+    s = Square("желтого", 11)
 
     utc_time = arrow.utcnow()
-    print('Времечко у нас такое вот (UTC): ',utc_time)
+    print('Времечко у нас такое вот (UTC): ', utc_time)
     print(r)
     print(c)
     print(s)
