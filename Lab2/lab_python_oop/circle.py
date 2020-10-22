@@ -28,7 +28,7 @@ class Circle(Figure):
         return math.pi*(self.r**2)
 
     def __repr__(self):
-        return '{} {} цвета радиусом {} площадью {}.'.format(
+        return '\033[31m{}\033[0m {} цвета радиусом {} площадью {}.'.format(
             Circle.get_figure_type(),
             self.fc.colorproperty,
             self.r,

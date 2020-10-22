@@ -19,7 +19,7 @@ class Square(Rectangle):
         super().__init__(color_param, self.side, self.side)
 
     def __repr__(self):
-        return '{} {} цвета со стороной {} площадью {}.'.format(
+        return '\033[33m{}\033[0m {} цвета со стороной {} площадью {}.'.format(
             Square.get_figure_type(),
             self.fc.colorproperty,
             self.side,
