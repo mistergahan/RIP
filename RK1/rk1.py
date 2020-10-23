@@ -1,55 +1,55 @@
+# Карпов Д. ИУ5-51Б Вариант №11
 # используется для сортировки
 from operator import itemgetter
 
 class Emp:
-    """Сотрудник"""
-    def __init__(self, id, fio, sal, dep_id):
+    """Программа"""
+    def __init__(self, id, name, price, comp_id):
         self.id = id
-        self.fio = fio
-        self.sal = sal
-        self.dep_id = dep_id
+        self.name = name
+        self.price = price
+        self.comp_id = comp_id
 
 class Dep:
-    """Отдел"""
+    """Компьютер"""
     def __init__(self, id, name):
         self.id = id
         self.name = name
 
 class EmpDep:
     """
-    'Сотрудники отдела' для реализации 
+    'Программы компьютера' для реализации
     связи многие-ко-многим
     """
-    def __init__(self, dep_id, emp_id):
-        self.dep_id = dep_id
-        self.emp_id = emp_id
+    def __init__(self, comp_id, prog_id):
+        self.comp_id = comp_id
+        self.prog_id = prog_id
 
-# Отделы
+# Компьютеры
 deps = [
-    Dep(1, 'отдел кадров'),
-    Dep(2, 'архивный отдел ресурсов'),
-    Dep(3, 'бухгалтерия'),
-    Dep(4, 'тестирование'),
-    Dep(5, 'разработка'),
-    Dep(6, 'собственная безопасность'),
-    Dep(11, 'отдел (другой) кадров'),
-    Dep(22, 'архивный (другой) отдел ресурсов'),
-    Dep(33, '(другая) бухгалтерия'),
+    Dep(1, 'Компьютер Михаил'),
+    Dep(2, 'Аркон'),
+    Dep(3, 'Мой компьютер'),
+    Dep(4, 'Леново'),
+    Dep(5, 'МакБук'),
+    Dep(6, 'Персональный компьютер'),
+    Dep(11, 'Рабочий компьютер'),
+    Dep(12, 'Соник'),
 ]
 
-# Сотрудники
+# Программы
 emps = [
-    Emp(1, 'Артамонов', 25000, 1),
-    Emp(2, 'Петров', 35000, 2),
-    Emp(3, 'Иваненко', 45000, 3),
-    Emp(4, 'Иванов', 35000, 3),
-    Emp(5, 'Иванин', 25000, 3),
-    Emp(6, 'Абрамов', 200000, 4),
-    Emp(7, 'Беляев', 15000, 6),
-    Emp(8, 'Гоголь', 20000, 6),
-    Emp(9, 'Достоевский', 25500, 5),
-    Emp(10, 'Сидоров', 25005, 3),
-    Emp(11, 'Енин', 11000, 3),
+    Emp(1, 'Фотошоп', 2500, 1),
+    Emp(2, 'Лайтрум', 3500, 2),
+    Emp(3, 'Вегас Про', 22000, 3),
+    Emp(4, 'Аймуви', 1000, 3),
+    Emp(5, 'Ворд', 8000, 3),
+    Emp(6, 'Вим', 500, 4),
+    Emp(7, 'ВинРар', 800, 6),
+    Emp(8, 'ТекстЕдит', 200, 6),
+    Emp(9, 'ДосБокс', 25500, 5),
+    Emp(10, 'ГТА', 5010, 3),
+    Emp(11, 'НФС', 1100, 3),
 ]
 
 emps_deps = [
@@ -65,10 +65,8 @@ emps_deps = [
     EmpDep(3,10),
     EmpDep(3,11),
     EmpDep(11,1),
-    EmpDep(22,2),
-    EmpDep(33,3),
-    EmpDep(33,4),
-    EmpDep(33,5),
+    EmpDep(12,2),
+
 ]
 
 
@@ -76,18 +74,18 @@ def main():
     """Основная функция"""
 
     # Соединение данных один-ко-многим 
-    one_to_many = [(e.fio, e.sal, d.name) 
+    one_to_many = [(e.name, e.price, d.name)
         for d in deps 
         for e in emps 
-        if e.dep_id==d.id]
+        if e.comp_id==d.id]
     
     # Соединение данных многие-ко-многим
-    many_to_many_temp = [(d.name, ed.dep_id, ed.emp_id) 
+    many_to_many_temp = [(d.name, ed.comp_id, ed.prog_id)
         for d in deps 
         for ed in emps_deps 
-        if d.id==ed.dep_id]
+        if d.id==ed.comp_id]
     
-    many_to_many = [(e.fio, e.sal, dep_name) 
+    many_to_many = [(e.name, e.price, dep_name)
         for dep_name, dep_id, emp_id in many_to_many_temp
         for e in emps if e.id==emp_id]
 
@@ -97,33 +95,33 @@ def main():
     
     print('\nЗадание А2')
     res_12_unsorted = []
-    # Перебираем все отделы
+    # Перебираем все компьютеры
     for d in deps:
-        # Список сотрудников отдела
+        # Список программ компьютера
         d_emps = list(filter(lambda i: i[2]==d.name, one_to_many))
-        # Если отдел не пустой        
+        # Если компьютер не пустой
         if len(d_emps) > 0:
-            # Зарплаты сотрудников отдела
+            # Стоимость программ компьютера
             d_sals = [sal for _,sal,_ in d_emps]
-            # Суммарная зарплата сотрудников отдела
+            # Суммарная стоимость программ компьютера
             d_sals_sum = sum(d_sals)
             res_12_unsorted.append((d.name, d_sals_sum))
 
-    # Сортировка по суммарной зарплате
+    # Сортировка по суммарной стоимости
     res_12 = sorted(res_12_unsorted, key=itemgetter(1), reverse=True)
     print(res_12)
 
     print('\nЗадание А3')
     res_13 = {}
-    # Перебираем все отделы
+    # Перебираем все компьютеры
     for d in deps:
-        if 'отдел' in d.name:
-            # Список сотрудников отдела
+        if 'компьютер' in d.name:
+            # Список программ компьютера
             d_emps = list(filter(lambda i: i[2]==d.name, many_to_many))
-            # Только ФИО сотрудников
+            # Только Названия программ
             d_emps_names = [x for x,_,_ in d_emps]
             # Добавляем результат в словарь
-            # ключ - отдел, значение - список фамилий
+            # ключ - коипьютер, значение - список Названий
             res_13[d.name] = d_emps_names
 
     print(res_13)
