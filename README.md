@@ -1,7 +1,9 @@
 # RIP
 RIP - 
 Internet Application Development (IAD)📝
-Teacher: Gapanyuk Yu. E.
+
+Teacher: Gapanyuk Y. E.
+
 РК1✔️
 
 1. Laboratory No. 1 - Lab1 ✔️  
