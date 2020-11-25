@@ -1,0 +1,102 @@
+
+/** ==================================================
+
+responsive.css
+
+
+[table of contents]
+
+- smaller than 800px
+- smaller than 600px
+- smaller than 500px
+
+================================================== **/
+
+
+
+/** smaller than 800px
+================================================== **/
+
+	@media (max-width: 800px) {
+
+		.column {
+			width: 100% !important;
+			padding: 0 !important;
+			margin-bottom: 50px !important;
+		}
+
+		.column:last-child { margin-bottom: 0 !important; }
+
+		h1 { font-size: 40px; line-height: 1.2; }
+		h2 { font-size: 32px; line-height: 1.25; }
+		h3 { font-size: 28px; line-height: 1.3; }
+		h4 { font-size: 24px; line-height: 1.35; }
+		h5 { font-size: 22px; line-height: 1.5; }
+		h6 { font-size: 18px; line-height: 1.6; }
+
+		#header.open { width: 70%; }
+
+		.journal .post-image { margin-bottom: 50px; }
+
+	}
+
+
+/** smaller than 600px
+================================================== **/
+
+	@media (max-width: 600px) {
+
+		.container { width: 100%; }
+
+		blockquote { margin: 0; }
+
+		#header { border-right: 0; border-bottom: 1px solid #e1e1e1; }
+		#header.loaded { width: 100%; height: 80px; }
+		#header.open { height: 100%; overflow: auto; }
+		#header .sidebar { width: 100%; height: 80px; }
+
+		#header .sidebar .loader,
+		#header .sidebar .trigger {
+			top: 50%;
+			left: 50px;
+			margin-top: -8px;
+			margin-left: 0;
+		}
+
+		#header .sidebar .logo {
+			top: 50%;
+			right: 50px;
+			bottom: auto;
+			left: auto;
+			margin: 0;
+
+			-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+		}
+
+		.site-nav { top: 80px; left: 0; }
+		.site-nav.visible { left: 50px; }
+
+		#wrapper { padding-top: 80px; padding-left: 0; }
+
+		.outer .inner,
+		.project-body .outer .inner { padding-right: 50px; padding-left: 50px; }
+
+	}
+
+
+/** smaller than 500px
+================================================== **/
+
+	@media (max-width: 500px) {
+
+		body { font-size: 16px; }
+
+		#header .sidebar .loader,
+		#header .sidebar .trigger,
+		.site-nav.visible { left: 30px; }
+
+		.outer .inner { padding: 100px 30px; }
+		.project-body .outer .inner { padding: 0 30px; }
+
+	}
