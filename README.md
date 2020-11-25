@@ -1,5 +1,5 @@
 # RIP
-RIP Labs BMSTU
+RIP - 
 Internet Application Development (IAD)📝
 Teacher: Gapanyuk Yu. E.
 РК1✔️
