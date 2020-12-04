@@ -12,7 +12,7 @@ Teacher: Gapanyuk Y. E.
 2. Laboratory No. 2 - Lab2 ✔️  
 3. Laboratory No. 3 - Lab3 ✔️  
 4. Laboratory No. 4 - Lab4 ✔️  
-5. Laboratory No. 5 - ...    
-6. Laboratory No. 6 - ...    
-7. Laboratory No. 7 - ...    
+5. Laboratory No. 5 - Site ✔️   
+6. Laboratory No. 6 - Site ✔️   
+7. Laboratory No. 7 - Site ✔️   
 8. Laboratory No. 8 -  
