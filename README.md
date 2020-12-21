@@ -17,4 +17,4 @@ Teacher: Gapanyuk Y. E.
 5. Laboratory No. 5 - Site ✔️   
 6. Laboratory No. 6 - Site ✔️   
 7. Laboratory No. 7 - Site ✔️   
-8. Laboratory No. 8 -  
+8. Laboratory No. 8 - Lab8 ✔️
