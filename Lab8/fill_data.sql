@@ -1,0 +1,23 @@
+INSERT INTO myapp_detail(id, name, quantity, price, img) VALUES
+(0, 'iPhone 2G', 0, 200000, '1.png'),
+(1, 'iPhone 3G', 64, 4000, '2.png'),
+(2, 'iPhone 2Gs', 10, 5000, '3.png'),
+(3, 'iPhone 4', 90, 6000, '4.png'),
+(4, 'iPhone 4S', 84, 7000, '5.png'),
+(5, 'iPhone 5', 18, 8000, '6.png'),
+(6, 'iPhone 5S', 6, 9500, '7.png'),
+(7, 'iPhone 5C', 64, 9000, '8.png'),
+(8, 'iPhone SE', 52, 11000, '9.png'),
+(9, 'iPhone 6', 76, 12000, '10.png'),
+(10, 'iPhone 7', 39, 13000, '11.png'),
+(11, 'iPhone 7+', 102, 14000, '12.png'),
+(12, 'iPhone 8', 11, 15000, '13.png'),
+(13, 'iPhone 8+', 47, 16000, '14.png'),
+(14, 'iPhone X', 29, 17000, '15.png'),
+(15, 'iPhone XS', 58, 18000, '16.png'),
+(16, 'iPhone 11', 78, 80000, '17.png'),
+(17, 'iPhone 11 Pro/Pro Max', 110, 90000, '18.png'),
+(18, 'iPhone 12', 140, 100000, '19.png'),
+(19, 'iPhone 12 Pro', 13, 110000, '20.png'),
+(20, 'iPhone XR', 18, 60000, '21.png')
+
