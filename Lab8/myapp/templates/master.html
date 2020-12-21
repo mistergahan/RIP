@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>iPhone</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="static/css/bootstrap.min.css" rel="stylesheet">
+		<script src="static/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+    <h1>Все модели телефонов Apple:</h1>
+		<div class="list-group m-5">
+			{% for item in details %}
+			<a href="{% url 'detail' item.id %}" class="list-group-item list-group-item-action">{{ item.name }}</a>
+			{% endfor %}
+		</div>
+	</body>
+</html>
