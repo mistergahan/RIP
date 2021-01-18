@@ -1,4 +1,4 @@
-# RIP
+# RIP(РИП - Разработка Интернет Приложений)
 RIP - 
 Internet Application Development (IAD)📝
 
